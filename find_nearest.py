@@ -25,4 +25,8 @@ def find_nearest(value,array):
 if __name__ == "__main__":
     data  = numpy.arange(-2.0,5.0,.5)
     point =  -1.6
-    print find_nearest(point,data)
+    index,value = find_nearest(point,data)
+    print "The closest value is at the index %i and the value at this index is %s" %(index,str(value))
+    # Benchmark on MacBook 2.4GHz Intel Core 2 Duo 4Go 667MHz DDR2 SDRAM :
+    # approx. 19 us for len(data) = 1000
+    # approx. 536 us for len(data) = 100000
